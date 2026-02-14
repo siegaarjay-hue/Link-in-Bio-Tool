@@ -2,8 +2,6 @@
 
 > A sleek, modern, and fully customizable link-in-bio page — your own Linktree alternative. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsiegaarjay-hue%2FLink-in-Bio-Tool)
-
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=flat-square&logo=tailwindcss)
@@ -23,22 +21,26 @@
 - 🎨 **Beautiful Design** — Glassmorphism card, gradient backgrounds, modern typography
 - 🌗 **Dark / Light Theme** — Toggle with smooth transitions, persisted in localStorage
 - 🎬 **Smooth Animations** — Powered by Framer Motion with staggered entrance effects
-- 📱 **Mobile-First** — Fully responsive, looks great on any device
+- 📱 **Fully Responsive** — Looks great on mobile, tablet, and desktop
 - ⚡ **Fast** — Built on Next.js App Router for optimal performance
 - 🔧 **Easy to Customize** — Single config file to update all links and profile info
-- 🚀 **One-Click Deploy** — Deploy to Vercel in seconds
+- 🚀 **One-Click Deploy** — Deploy to Vercel, Render, or Railway in seconds
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Deploy
 
-### One-Click Deploy
+Deploy your own copy with one click:
 
-Click the button below to deploy your own copy to Vercel:
+| Platform | Deploy |
+|----------|--------|
+| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsiegaarjay-hue%2FLink-in-Bio-Tool) |
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/siegaarjay-hue/Link-in-Bio-Tool) |
+| **Railway** | [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template?referralCode=&repo=https://github.com/siegaarjay-hue/Link-in-Bio-Tool) |
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsiegaarjay-hue%2FLink-in-Bio-Tool)
+---
 
-### Local Development
+## 🛠️ Local Development
 
 1. **Clone the repository:**
 

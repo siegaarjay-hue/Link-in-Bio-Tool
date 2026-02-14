@@ -18,7 +18,7 @@ export default function Avatar() {
       transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.1 }}
       className="relative"
     >
-      <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/30 dark:ring-white/10 shadow-xl">
+      <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-[3px] ring-[var(--accent)]/20 shadow-lg shadow-violet-500/10 dark:shadow-violet-500/5">
         {avatarUrl ? (
           <img
             src={avatarUrl}
@@ -26,13 +26,15 @@ export default function Avatar() {
             className="w-full h-full object-cover"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
-            <span className="text-3xl font-bold text-white">{initials}</span>
+          <div className="w-full h-full bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 flex items-center justify-center">
+            <span className="text-2xl sm:text-3xl font-bold text-white tracking-wide">
+              {initials}
+            </span>
           </div>
         )}
       </div>
       {/* Online indicator */}
-      <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-400 rounded-full border-3 border-white dark:border-slate-900 shadow-sm" />
+      <div className="absolute bottom-0.5 right-0.5 sm:bottom-1 sm:right-1 w-4 h-4 sm:w-5 sm:h-5 bg-emerald-400 rounded-full border-[2.5px] border-white dark:border-[#111122] shadow-sm" />
     </motion.div>
   );
 }
