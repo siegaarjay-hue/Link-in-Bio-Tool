@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.3);
+  --link-bg: rgba(255, 255, 255, 0.6);
+  --link-hover-bg: rgba(255, 255, 255, 0.9);
+  --link-border: rgba(255, 255, 255, 0.4);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --social-bg: rgba(255, 255, 255, 0.5);
+  --social-hover-bg: rgba(255, 255, 255, 0.8);
+}
+
+.dark {
+  --background: #0f0a1a;
+  --foreground: #f1f5f9;
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --card-border: rgba(148, 163, 184, 0.1);
+  --link-bg: rgba(30, 41, 59, 0.6);
+  --link-hover-bg: rgba(30, 41, 59, 0.9);
+  --link-border: rgba(148, 163, 184, 0.15);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --social-bg: rgba(30, 41, 59, 0.5);
+  --social-hover-bg: rgba(30, 41, 59, 0.8);
+}
+
+body {
+  color: var(--foreground);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+}
+
+/* Link button styles */
+.link-button {
+  background: var(--link-bg);
+  border: 1px solid var(--link-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-button:hover {
+  background: var(--link-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.link-button:active {
+  transform: translateY(0);
+}
+
+/* Social icon styles */
+.social-icon {
+  background: var(--social-bg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+  background: var(--social-hover-bg);
+  transform: translateY(-3px);
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
