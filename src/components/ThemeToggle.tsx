@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const stored = localStorage.getItem("theme");
     if (stored === "light") {
       setIsDark(false);
@@ -30,25 +31,19 @@ export default function ThemeToggle() {
     }
   };
 
+  if (!mounted) return null;
+
   return (
-    <motion.button
+    <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 p-2.5 sm:p-3 rounded-xl glass-card cursor-pointer hover:shadow-md transition-shadow duration-300"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.92 }}
+      className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[var(--toggle-bg)] border border-[var(--card-border)] flex items-center justify-center cursor-pointer transition-all duration-200 ease-out hover:bg-[var(--toggle-hover)] hover:border-[var(--link-hover-border)]"
       aria-label="Toggle theme"
     >
-      <motion.div
-        initial={false}
-        animate={{ rotate: isDark ? 0 : 180 }}
-        transition={{ duration: 0.3 }}
-      >
-        {isDark ? (
-          <FiSun className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" />
-        ) : (
-          <FiMoon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600" />
-        )}
-      </motion.div>
-    </motion.button>
+      {isDark ? (
+        <FiSun className="w-4 h-4 text-[var(--text-secondary)]" />
+      ) : (
+        <FiMoon className="w-4 h-4 text-[var(--text-secondary)]" />
+      )}
+    </button>
   );
 }
